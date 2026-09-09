@@ -17,7 +17,7 @@ import java.time.Instant;
 public class Bookmark {
 
     @Id
-    @SequenceGenerator(name = "bm_id_seq_gen", sequenceName = "bm_id_seq")
+    @SequenceGenerator(name = "bm_id_seq_gen", sequenceName = "bm_id_seq", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "bm_id_seq_gen")
     private Long id;
 

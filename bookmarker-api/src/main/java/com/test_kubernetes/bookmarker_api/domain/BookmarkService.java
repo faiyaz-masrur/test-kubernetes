@@ -19,7 +19,7 @@ public class BookmarkService {
     @Transactional(readOnly = true)
     public BookmarksDto getBookmarks(int pageNo) {
         int pageNum = pageNo < 1 ? 0 : pageNo - 1;
-        Pageable pageable = PageRequest.of(pageNum, 10, Sort.Direction.DESC, "createdAt");
+        Pageable pageable = PageRequest.of(pageNum, 10, Sort.Direction.DESC, "id");
         return new BookmarksDto(
                 bookmarkRepository
                         .findBookmarks(pageable)

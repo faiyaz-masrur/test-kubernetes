@@ -21,7 +21,7 @@ public class BookmarkController {
     private final BookmarkService bookmarkService;
 
     @GetMapping("/all")
-    public ResponseEntity<BookmarksDto> getAllBookmarks(
+    public ResponseEntity<BookmarksDto> getBookmarks(
             @RequestParam(name = "page", defaultValue = "1")
             Integer pageNo
     ){
